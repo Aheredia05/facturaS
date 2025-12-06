@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view>
+    <columns>
+        <group name="services" numcolumns="12" valign="bottom">
+            <column name="name" display="none" order="0">
+                <widget type="text" fieldname="name" readonly="true" required="true"/>
+            </column>
+            <column name="pattern" numcolumns="3" order="100">
+                <widget type="text" fieldname="patron"/>
+            </column>
+            <column name="number-length" numcolumns="2" order="110">
+                <widget type="number" fieldname="longnumero" decimal="0" min="1" required="true"/>
+            </column>
+            <column name="new-work-status" numcolumns="4" order="120">
+                <widget type="select" fieldname="workstatus" translate="true" required="true">
+                    <values title="do-nothing">0</values>
+                    <values title="make-invoice">1</values>
+                    <values title="invoiced">2</values>
+                    <values title="make-delivery-note">3</values>
+                    <values title="delivery-note">4</values>
+                    <values title="make-estimation">5</values>
+                    <values title="estimation">6</values>
+                </widget>
+            </column>
+            <column name="allow-new-service-without-machine" order="130">
+                <widget type="checkbox" fieldname="new_service_without_machine"/>
+            </column>
+            <column name="disable-stock-management" order="140">
+                <widget type="checkbox" fieldname="disablestockmanagement"/>
+            </column>
+        <column name="title" numcolumns="4" order="90">
+                <widget type="text" fieldname="title"/>
+            </column></group>
+        <group name="print-pdf" title="print-pdf" description="print-pdf-desc" icon="fa-solid fa-file-pdf" numcolumns="12" valign="bottom">
+            <column name="pdf-footer-text" title="footer-text" numcolumns="12" order="100">
+                <widget type="textarea" fieldname="print_pdf_footer_text" rows="4"/>
+            </column>
+            <column name="print-machine-info" order="110">
+                <widget type="checkbox" fieldname="print_pdf_machine_info"/>
+            </column>
+            <column name="print-observations" order="120">
+                <widget type="checkbox" fieldname="print_pdf_observations"/>
+            </column>
+            <column name="print-agent" order="130">
+                <widget type="checkbox" fieldname="print_pdf_agent"/>
+            </column>
+            <column name="print-assigned" order="140">
+                <widget type="checkbox" fieldname="print_pdf_assigned"/>
+            </column>
+            <column name="print-works" order="150">
+                <widget type="checkbox" fieldname="print_pdf_works"/>
+            </column>
+            <column name="print-works-reference" order="160">
+                <widget type="checkbox" fieldname="print_pdf_work_reference"/>
+            </column>
+            <column name="print-works-description" order="170">
+                <widget type="checkbox" fieldname="print_pdf_work_description"/>
+            </column>
+            <column name="print-works-quantity" order="180">
+                <widget type="checkbox" fieldname="print_pdf_work_quantity"/>
+            </column>
+            <column name="print-works-price" order="190">
+                <widget type="checkbox" fieldname="print_pdf_work_price"/>
+            </column>
+        <column name="print-material" order="113">
+                <widget type="checkbox" fieldname="print_pdf_material"/>
+            </column><column name="print-solution" order="116">
+                <widget type="checkbox" fieldname="print_pdf_solution"/>
+            </column><column name="print-works-net" order="200">
+                <widget type="checkbox" fieldname="print_pdf_work_net"/>
+            </column><column name="print-signature-box" order="210">
+                <widget type="checkbox" fieldname="print_pdf_signature_box"/>
+            </column><column name="print-text-blocks" order="220">
+                <widget type="checkbox" fieldname="print_pdf_text_blocks"/>
+            </column></group>
+        <group name="print-ticket" title="print-ticket" description="print-ticket-desc" icon="fa-solid fa-receipt" numcolumns="12" valign="bottom">
+            <column name="ticket-footer-text" title="ticket-footer-text" numcolumns="12" order="100">
+                <widget type="textarea" fieldname="print_ticket_footer_text" rows="4"/>
+            </column>
+            <column name="print-machine-info" order="110">
+                <widget type="checkbox" fieldname="print_ticket_machine_info"/>
+            </column>
+            <column name="print-observations" order="120">
+                <widget type="checkbox" fieldname="print_ticket_observations"/>
+            </column>
+            <column name="print-agent" order="130">
+                <widget type="checkbox" fieldname="print_ticket_agent"/>
+            </column>
+            <column name="print-assigned" order="140">
+                <widget type="checkbox" fieldname="print_ticket_assigned"/>
+            </column>
+            <column name="print-works" order="150">
+                <widget type="checkbox" fieldname="print_ticket_works"/>
+            </column>
+            <column name="print-works-reference" order="160">
+                <widget type="checkbox" fieldname="print_ticket_work_reference"/>
+            </column>
+            <column name="print-works-description" order="170">
+                <widget type="checkbox" fieldname="print_ticket_work_description"/>
+            </column>
+            <column name="print-works-quantity" order="180">
+                <widget type="checkbox" fieldname="print_ticket_work_quantity"/>
+            </column>
+            <column name="print-works-price" order="190">
+                <widget type="checkbox" fieldname="print_ticket_work_price"/>
+            </column>
+        </group>
+        <group name="generate-document" title="generate-document" description="generate-document-desc" icon="fa-solid fa-file-invoice-dollar" numcolumns="12" valign="bottom">
+            <column name="add-description" overwrite="true" order="110">
+                <widget type="checkbox" fieldname="document_description"/>
+            </column>
+            <column name="add-material" overwrite="true" order="120">
+                <widget type="checkbox" fieldname="document_material"/>
+            </column>
+            <column name="add-solution" overwrite="true" order="130">
+                <widget type="checkbox" fieldname="document_solution"/>
+            </column>
+            <column name="add-observations" overwrite="true" order="140">
+                <widget type="checkbox" fieldname="document_observations"/>
+            </column>
+            <column name="add-start-date" overwrite="true" order="150">
+                <widget type="checkbox" fieldname="document_start_date"/>
+            </column>
+            <column name="add-end-date" overwrite="true" order="170">
+                <widget type="checkbox" fieldname="document_end_date"/>
+            </column>
+            <column name="add-machine" overwrite="true" order="190">
+                <widget type="checkbox" fieldname="document_machine"/>
+            </column>
+        <column name="document-title" numcolumns="4" order="100">
+                <widget type="text" fieldname="document_title"/>
+            </column><column name="add-start-hour" order="160">
+                <widget type="checkbox" fieldname="document_start_hour"/>
+            </column><column name="add-end-hour" order="180">
+                <widget type="checkbox" fieldname="document_end_hour"/>
+            </column><column name="service-vehicle-observations" order="200">
+                <widget type="checkbox" fieldname="service_vehicle_observations"/>
+            </column></group>
+    <group name="signature-box" title="signature-box" description="signature-box-desc" icon="fa-solid fa-file-pdf" numcolumns="12" valign="bottom">
+            <column name="signature-box-title" numcolumns="6" order="100">
+                <widget type="text" fieldname="signature_box_title"/>
+            </column>
+            <column name="signature-box-text-1" numcolumns="12" order="110">
+                <widget type="textarea" fieldname="signature_box_text_1" rows="4"/>
+            </column>
+            <column name="signature-box-text-2" numcolumns="12" order="120">
+                <widget type="textarea" fieldname="signature_box_text_2" rows="4"/>
+            </column>
+            <column name="signature-box-text-3" numcolumns="12" order="130">
+                <widget type="textarea" fieldname="signature_box_text_3" rows="4"/>
+            </column>
+            <column name="signature-box-text-4" numcolumns="12" order="140">
+                <widget type="textarea" fieldname="signature_box_text_4" rows="4"/>
+            </column>
+        </group><group name="text-blocks" title="text-blocks" description="text-blocks-desc" icon="fa-solid fa-file-pdf" numcolumns="12" valign="bottom">
+            <column name="block-title-1" numcolumns="6" order="150">
+                <widget type="text" fieldname="block_title_1"/>
+            </column>
+            <column name="block-text-1" numcolumns="12" order="160">
+                <widget type="textarea" fieldname="block_text_1" rows="4"/>
+            </column>
+            <column name="block-title-2" numcolumns="6" order="170">
+                <widget type="text" fieldname="block_title_2"/>
+            </column>
+            <column name="block-text-2" numcolumns="12" order="180">
+                <widget type="textarea" fieldname="block_text_2" rows="4"/>
+            </column>
+            <column name="block-title-3" numcolumns="6" order="190">
+                <widget type="text" fieldname="block_title_3"/>
+            </column>
+            <column name="block-text-3" numcolumns="12" order="200">
+                <widget type="textarea" fieldname="block_text_3" rows="4"/>
+            </column>
+            <column name="block-title-4" numcolumns="6" order="210">
+                <widget type="text" fieldname="block_title_4"/>
+            </column>
+            <column name="block-text-4" numcolumns="12" order="220">
+                <widget type="textarea" fieldname="block_text_4" rows="4"/>
+            </column>
+        </group></columns>
+</view>
